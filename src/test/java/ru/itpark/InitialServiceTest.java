@@ -14,6 +14,7 @@ class InitialServiceTest {
         assertEquals(expected, actual);
     }
 
+
     {
         InitialService service = new InitialService();
         String actual = service.Initials1("Andrea Pedro Trinchieri");
