@@ -1,6 +1,5 @@
 package ru.itpark;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -10,9 +9,11 @@ class InitialServiceTest {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/initials.csv", numLinesToSkip = 1)
-    void getInitials(String input, String expected) {
+    void getInitials(String input, String expected) {//просьба возле каждой строчки теста
+        // написать, что именно она делает.
         InitialService service = new InitialService();
-        String actual = service.getInitials(input);
+        String actual = service.getInitials (input); //откуда программа узнала, что такое
+        // input? Мы же нигде не объявляли эту переменную? Тот же вопрос про expected.
         assertEquals(expected, actual);
     }
 }
